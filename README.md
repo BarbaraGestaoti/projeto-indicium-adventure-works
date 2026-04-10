@@ -19,4 +19,4 @@ A Adventure Works é uma indústria de bicicletas em expansão que enfrenta difi
 
 ## 📂 Organização do Repositório
 * `/documentos`: Contém o planejamento detalhado (Anexo B) e diagramas conceituais.
-* `/models`: (Em breve) Contém as transformações SQL desenvolvidas no dbt.
+* `/models`: inserção do banco de dados no databricks
