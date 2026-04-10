@@ -20,3 +20,13 @@ A Adventure Works é uma indústria de bicicletas em expansão que enfrenta difi
 ## 📂 Organização do Repositório
 * `/documentos`: Contém o planejamento detalhado (Anexo B) e diagramas conceituais.
 * `/models`: inserção do banco de dados no databricks
+
+* 
+🚀 Upgrade de Stack: Integração com Databricks
+Nesta etapa do projeto, evoluí a arquitetura para utilizar o Databricks como o motor de processamento.
+
+Data Warehouse: Databricks (Cloud Azure).
+
+Orquestração e Transformação: dbt (data build tool).
+
+Destaque Técnico: Configuração de conexão via Unity Catalog, garantindo governança e segurança nos modelos de dados.
