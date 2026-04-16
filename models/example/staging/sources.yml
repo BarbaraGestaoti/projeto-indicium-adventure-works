@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: sap_adw
+    database: hive_metastore # Verifique se este é o nome no seu Databricks
+    schema: adventure_works   # O nome do schema onde você subirá os dados
+    tables:
+      - name: address
+      - name: customer
+      - name: salesorderheader
+      - name: product
