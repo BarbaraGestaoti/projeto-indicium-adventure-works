@@ -2,10 +2,26 @@ version: 2
 
 sources:
   - name: sap_adw
-    database: hive_metastore # Verifique se este é o nome no seu Databricks
-    schema: adventure_works   # O nome do schema onde você subirá os dados
+    database: barbra_dev
+    schema: desafio_analytics_engineer
     tables:
       - name: address
+      - name: address_type
+      - name: bill_of_materials
+      - name: business_entity_add
+      - name: contact_type
+      - name: country_region_curr
+      - name: credit_card
+      - name: culture
+      - name: currency
+      - name: currency_rate
       - name: customer
-      - name: salesorderheader
-      - name: product
+      - name: department
+      - name: document
+      - name: email_address
+      - name: employee_department
+      - name: employee_pay_history
+      - name: job_candidate_toremove
+      - name: location
+ 
+
