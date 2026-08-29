@@ -5,6 +5,8 @@ sources:
     database: fea_academy
     schema: adventure_works
     tables:
+      - name: address
+      - name: production_product
       - name: sales_salesperson
       - name: sales_salesorderheader
       - name: sales_salesorderdetail
