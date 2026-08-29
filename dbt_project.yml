@@ -16,8 +16,8 @@ clean-targets:
 
 models:
   projeto_indicium_adventure_works:
-    +catalog: barbara_dev
-    example:
-      +materialized: view
+    +catalog: fea_academy
     staging:
       +materialized: view
+    marts:
+      +materialized: table
