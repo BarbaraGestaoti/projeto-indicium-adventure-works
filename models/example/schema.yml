@@ -1,5 +1,93 @@
 version: 2
 
 models:
-  - name: stg_sap__address
-    description: "Mapeamento da tabela de endereços do SAP."
+  - name: stg_sap_address
+    description: "Mapeamento da tabela de enderecos do SAP."
+    columns:
+      - name: address_id
+        description: "Identificador unico do endereco."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sap_customer
+    description: "Tabela de staging dos clientes extraida do Adventure Works."
+    columns:
+      - name: customer_id
+        description: "Identificador unico do cliente."
+        tests:
+          - unique
+          - not_null
+      - name: person_id
+        description: "Identificador da pessoa associada."
+
+  - name: stg_sap_person
+    description: "Tabela de staging das pessoas fisicas e contatos do Adventure Works."
+    columns:
+      - name: business_entity_id
+        description: "Identificador unico da entidade de negocio."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sap_salesorderheader
+    description: "Tabela de staging do cabecalho dos pedidos de venda do Adventure Works."
+    columns:
+      - name: sales_order_id
+        description: "Identificador unico do pedido de venda."
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Identificador do cliente que fez o pedido."
+        tests:
+          - not_null
+
+  - name: stg_sap_salesorderdetail
+    description: "Tabela de staging dos itens/detalhes dos pedidos de venda do Adventure Works."
+    columns:
+      - name: sales_order_id
+        description: "Identificador do pedido de venda (parte da chave composta)."
+        tests:
+          - not_null
+      - name: sales_order_detail_id
+        description: "Identificador unico do detalhe/item do pedido."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sap_product
+    description: "Tabela de staging dos produtos do Adventure Works."
+    columns:
+      - name: product_id
+        description: "Identificador unico do produto."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sap_productcategory
+    description: "Tabela de staging das categorias de produtos."
+    columns:
+      - name: product_category_id
+        description: "Identificador unico da categoria."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sap_productsubcategory
+    description: "Tabela de staging das subcategorias de produtos."
+    columns:
+      - name: product_subcategory_id
+        description: "Identificador unico da subcategoria."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sap_store
+    description: "Tabela de staging das lojas/clientes corporativos."
+    columns:
+      - name: business_entity_id
+        description: "Identificador unico da loja."
+        tests:
+          - unique
+          - not_null
